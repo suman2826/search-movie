@@ -6,7 +6,7 @@ import MovieCard from './MovieCard';
 
 export class MoviesContainer extends Component {
     render() {
-      console.log('dfdfdf');
+      // console.log('dfdfdf');
         const { movies } = this.props;
         const movies_results = movies.results || [];
         let content = '';

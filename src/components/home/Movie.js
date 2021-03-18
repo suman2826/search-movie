@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Spinner from '../layout/Spinner';
 import StarRatings from 'react-star-ratings';
 
 

@@ -11,7 +11,7 @@ export class Movie extends Component {
     this.props.setLoading();
   }
   render() {
-    const { loading, movie } = this.props;
+    const {movie } = this.props;
     let movieInfo = (
       <div className="container">
         <div className="row">
@@ -45,11 +45,12 @@ export class Movie extends Component {
         </div>
       </div>
     );
+    var content;
     if(movie.original_title){
-      var content = movieInfo;
+      content = movieInfo;
     }
     else {
-      var content = <h2 style={{textAlign: 'center'}}>No such Movie ID exists!!</h2>
+      content = <h2 style={{textAlign: 'center'}}>No such Movie ID exists!!</h2>
     }
     
     return <div>{content}</div>;
@@ -58,7 +59,6 @@ export class Movie extends Component {
 }
 
 const mapStateToProps = state => ({
-  loading: state.movies.loading,
   movie: state.movies.movie
 });
 

@@ -10,7 +10,7 @@ export class MoviesContainer extends Component {
         const { movies } = this.props;
         const movies_results = movies.results || [];
         let content = '';
-        if(movies_results.length == 0){
+        if(movies_results.length === 0){
 
           content = <h2>No such movie exist please enter the name correctly!!!</h2>
         }

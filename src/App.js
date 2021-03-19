@@ -15,7 +15,7 @@ import store from './store';
 
 class App extends Component {
   componentDidMount() {
-    axios.get('http://api.themoviedb.org/3/movie/popular?api_key=c6441a90d447e1197b8eeb6295d9992a&language=en-US&page=1')
+    axios.get('https://api.themoviedb.org/3/movie/popular?api_key=c6441a90d447e1197b8eeb6295d9992a&language=en-US&page=1')
     .then(response => 
     store.dispatch(setPopularMovies(response.data)))
   };

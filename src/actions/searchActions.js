@@ -19,7 +19,7 @@ export const setPopularMovies = result => dispatch => {
 };
 
 export const fetchMovies = text => dispatch => {
-    axios.get(`http://api.themoviedb.org/3/search/movie?api_key=c6441a90d447e1197b8eeb6295d9992a&query=${text}`)
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=c6441a90d447e1197b8eeb6295d9992a&query=${text}`)
     .then(response => dispatch({
         type: FETCH_MOVIES,
         payload: response.data
@@ -28,7 +28,7 @@ export const fetchMovies = text => dispatch => {
 };
 
 export const fetchMovie = id => dispatch => {
-    axios.get(`http://api.themoviedb.org/3/movie/${id}?api_key=c6441a90d447e1197b8eeb6295d9992a`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=c6441a90d447e1197b8eeb6295d9992a`)
     .then(response => dispatch({
         type: FETCH_MOVIE,
         payload: response.data
